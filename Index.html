@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Css/bootstrap.min.css">
+  <script src="./Js/bootstrap.min.js" defer></script>
+  <style>
+    td,
+    th {
+      text-align: center;
+      color: aliceblue;
+    }
+
+    .modal-content {
+      background-color: rgb(56, 0, 129);
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+
+    #btnTitle {
+      padding: 20px;
+      background-color: forestgreen;
+
+    }
+
+    #btnTitle:hover {
+      background-color: lawngreen;
+    }
+
+    .display-6 {
+      font-size: 4em;
+      color: orange
+    }
+
+    .btn-group {
+      margin-left: 250px;
+    }
+
+    .table {
+      margin-bottom: 50px;
+    }
+
+    h2,
+    h1 {
+      color: orange;
+      text-align: center;
+    }
+
+    .select-blue {
+      background-color: midnightblue;
+      color: coral;
+    }
+  </style>
+  <title>Prueba</title>
+</head>
+
+<body style="background-color: rgb(1, 1, 61); color: antiquewhite;">
+
+  <div class="container">
+
+    <div class="row title">
+      <div class="col-9">
+        <div class="display-6">Revision de DB CAMPERS </div>
+      </div>
+      <div class="col-3"><button type="button" id="btnTitle" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#registerCamper">Registrar
+          camper</button></div>
+    </div>
+  </div>
+
+  <!--<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+      
+        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+      
+        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+      </div>-->
+  <!-- Modal -->
+  <div class="modal fade" id="registerCamper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">INGRESAR CAMPER</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formulario" class="row g-3" method="POST">
+            <div class="col-3">
+              <label for="idCamper" class="form-label header">ID CAMPER</label>
+              <input type="text" class="form-control" id="idCamper">
+            </div>
+            <div class="col-7">
+              <label for="nombre" class="form-label headerr">Nombre</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+
+            <div class="col-2">
+              <label for="edad" class="form-label header">Edad</label>
+              <input type="number" class="form-control" id="edad">
+            </div>
+
+            <div class="col-4">
+              <label for="telefono" class="form-label header">Telefono</label>
+              <input type="number" class="form-control" id="telefono">
+            </div>
+
+            <div class="col-4">
+              <label for="email" class="form-label header">Email</label>
+              <input type="text" class="form-control" id="email">
+
+              <!-- <select id="email" class="form-select">
+                    <option selected>Nivel Ingles</option>
+                    <option value="novato">Novato</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select> -->
+            </div>
+
+            <div class="col-4">
+              <label for="direccion" class="form-label headerr">Direccion</label>
+              <input type="text" class="form-control" id="direccion">
+
+              <!--<select id="direccion" class="form-select">
+                    <option selected>Nivel Campus</option>
+                    <option value="basico">Basico</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>-->
+            </div>
+
+            <div class="col-4">
+              <label for="dateBorn" class="form-label headerr">Fecha de nacimiento</label>
+              <input type="date" class="form-control" id="dateBorn">
+
+              <!-- <select id="especialidad" class="form-select">
+                    <option selected>Seleccione especialidad</option>
+                    <option value="frontEnd">Front-End</option>
+                    <option value="backEnd">Back-End</option>
+                    <option value="fullStack">Full-Stack</option>
+                </select> -->
+            </div>
+
+            <div class="col-4">
+              <label for="cedula" class="form-label header">Numero de documento</label>
+              <input type="number" class="form-control" id="cedula">
+              <!--<select id="expertoTecnologia" class="form-select">
+                    <option selected>Seleccione Experto Tecnologia</option>
+                    <option value="html">Html</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="node">Node Js</option>
+                    <option value="mongo">Mongo DB</option>
+                    <option value="php">Php</option>
+                    <option value="vue">Vue</option>
+                    <option value="asp">ASP.NET</option>
+                </select> -->
+            </div>
+            <div class="col-4">
+              <label for="dateIn" class="form-label header">Fecha de ingreso al programa</label>
+              <input type="date" class="form-control" id="dateIn">
+            </div>
+            <div class="col-4">
+              <label for="EleccionClase">Seleccione la clase a la que pertenece</label>
+            </div>
+            <div class="col-8">
+              <select id="EleccionClase" class="form-select ">
+                <option selected>Elija su clase</option>
+                <option value="1001">Artemis</option>
+                <option value="1002">Apolo</option>
+                <option value="1003">Sputnik</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <input type="submit" class="btn btn-success" id="agregarCamper"></input>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+
+
+
+  </div>
+  <div class="container">
+    <h1>Reclutas</h1>
+    <table class="table">
+      <thead>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Direccion</th>
+        <th>Fecha de nacimiento</th>
+        <th>Numero de identificacion</th>
+        <th>Fecha de ingreso</th>
+        <th>Equipo</th>
+        <th>acciones</th>
+      </thead>
+      <tbody id="TablaReclutas" class="listaDelete"></tbody>
+    </table>
+    <div class="row">
+      <div class="col-6">
+        <h2>Teams</h2>
+        <table class="table">
+          <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Trainer</th>
+            <th>Acciones</th>
+          </thead>
+          <tbody id="TablaTeams" class="listaDeleteTeams"></tbody>
+        </table>
+      </div>
+      <div class="col"></div>
+      <div class="col-5">
+        <h2>Skills</h2>
+        <table class="table">
+          <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+          </thead>
+          <tbody id="TablaSkills" class="listaDeleteSkill"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <h2>Modulos Skills</h2>
+        <table class="table">
+          <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Trainer</th>
+            <th>Acciones</th>
+          </thead>
+          <tbody id="TablaMod" class="listaDeleteMod"></tbody>
+        </table>
+      </div>
+      <div class="col"></div>
+      <div class="col-5">
+        <h2>Evaluacion</h2>
+        <table class="table">
+          <thead>
+            <th>Nota</th>
+            <th>reclutaId</th>
+            <th>Modulo Skill Id</th>
+            <th>Acciones</th>
+          </thead>
+          <tbody id="TablaEva" class="listaDeleteSkill"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOSTRAR LOS FILTROS -->
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <h1>Reclutas que llevan 2 meses</h1>
+        <table class="table">
+          <thead>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Fecha de Ingreso</th>
+          </thead>
+          <tbody id="DosMeses">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col"></div>
+      <div class="col-5">
+        <h1>Reclutas menores de edad</h1>
+        <table class="table">
+          <thead>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+          </thead>
+          <tbody id="menoresEdad">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h1>Reclutas asociados a un team</h1>
+        <div class="row">
+          <div class="col-4"> <label>Elija la clase a filtrar</label></div>
+          <div class="col-8"><select id="ChooseTeam" class="form-select select-blue">
+              <option selected>Elija su clase</option>
+              <option value="1001">Artemis</option>
+              <option value="1002">Apolo</option>
+              <option value="1003">Sputnik</option>
+            </select></div>
+        </div>
+
+
+        <table class="table">
+          <thead>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Team</th>
+          </thead>
+          <tbody id="Fteam">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col"></div>
+      <div class="col-5">
+        <h1>Modulos asociados a un skill</h1>
+        <div class="row">
+          <div class="col-4"> <label>Elija la clase a filtrar</label></div>
+          <div class="col-8"><select id="ChooseSkill" class="form-select select-blue">
+              <option selected>Elija su clase</option>
+              <option value="2001">frontEnd</option>
+              <option value="2002">BackEnd</option>
+              <option value="2003">fullStack</option>
+            </select></div>
+        </div>
+
+        <table class="table">
+          <thead>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Skill</th>
+          </thead>
+          <tbody id="modulosConSkill">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-6">
+        <h1>Listado de modulos cursados por reclutas</h1>
+        <div class="row" id="inyectarModulos">
+          <div class="col-4"> <label>Elija el modulo a filtrar</label></div>
+          <div class="col-8"><select id="ChooseModule" class="form-select select-blue"></select></div>
+        </div>
+          <!--
+          <div class="col-4"> <label>Elija el modulo a filtrar</label></div>
+          <div class="col-8"><select id="ChooseModule" class="form-select select-blue">
+              <option selected>Elija su clase</option>
+              <option value="3001"></option>
+              <option value="3002">Apolo</option>
+              <option value="3003">Sputnik</option>
+              <option value="3004"></option>
+            </select>
+          -->
+          <table class="table">
+            <thead>
+              <th>id</th>
+              <th>Modulo</th>
+            </thead>
+            <tbody id="moduloByRecluta">
+
+            </tbody>
+          </table>
+        </div>
+        
+        
+        <div class="col"></div>
+        <div class="col-5">
+          <h1>Modulos reprobados por reclutas</h1>
+          <div class="row">
+            <div class="col-4"> <label>Elija el modulo a filtrar</label></div>
+            <div class="col-8"><select id="ChooseLostModule" class="form-select select-blue"></select></div>
+          
+        <table class="table">
+          <thead>
+            <th>id recluta</th>
+            <th>Nota</th>
+            <th>Modulo</th>
+          </thead>
+          <tbody id="LostModule">
+            
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+
+  </div>
+  
+
+
+
+
+
+</body>
+<script src="./Js/app.js" type="module"></script>
+<script src="./Js/PeticionesApp.js" type="module"></script>
+
+</html>

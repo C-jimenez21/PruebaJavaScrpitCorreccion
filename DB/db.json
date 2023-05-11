@@ -1,0 +1,184 @@
+{
+  "reclutas": [
+    {
+      "id": "2",
+      "nombre": "Ivan",
+      "edad": 18,
+      "telefono": 3188361946,
+      "email": "ivan@gmail.com",
+      "direccion": "calle 9 10a 15",
+      "fechaNacimiento": "02/12/1999",
+      "numeroIdentificacion": 1005480201,
+      "fechaIngreso": 6149401098,
+      "teamId": "1002"
+    },
+    {
+      "id": "1",
+      "nombre": "Juliano",
+      "edad": 17,
+      "telefono": 3188361945,
+      "email": "Julian@gmail.com",
+      "direccion": "calle 9 10a 15",
+      "fechaNacimiento": "2001",
+      "numeroIdentificacion": 1005480203,
+      "fechaIngreso": 6063028213,
+      "teamId": "1002"
+    },
+    {
+      "id": "7",
+      "nombre": "luis fernando carreño",
+      "edad": "31",
+      "telefono": "3188361945",
+      "email": "cristianjjc21@gmail.com",
+      "direccion": "calle 20 N° 30-44",
+      "fechaNacimiento": "1994-02-21",
+      "numeroIdentificacion": "680001",
+      "fechaIngreso": 7365005869,
+      "teamId": "1002"
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos Julio",
+      "edad": "17",
+      "telefono": "3164664305",
+      "email": "fabioalberto1@aol.com",
+      "direccion": "calle 20 N° 30-44",
+      "fechaNacimiento": "2013-01-16",
+      "numeroIdentificacion": "680001",
+      "fechaIngreso": 10400290104,
+      "teamId": "1003"
+    },
+    {
+      "id": "4",
+      "nombre": "Jose Carvhalo",
+      "edad": "15",
+      "telefono": "3188361945",
+      "email": "undefined@asd.com",
+      "direccion": "calle 20 N° 30-44",
+      "fechaNacimiento": "2005-07-06",
+      "numeroIdentificacion": "11172129912",
+      "fechaIngreso": 31568347696,
+      "teamId": "1001"
+    },
+    {
+      "id": "5",
+      "nombre": "Angie Juliana",
+      "edad": "22",
+      "telefono": "3164664305",
+      "email": "fabioalberto1@aol.com",
+      "direccion": "calle 20 N° 30-44",
+      "fechaNacimiento": "2000-05-28",
+      "numeroIdentificacion": "1005480201",
+      "fechaIngreso": 13078840858,
+      "teamId": "1001"
+    },
+    {
+      "id": "6",
+      "nombre": "Deyber Gonzales",
+      "edad": "18",
+      "telefono": "5185281922",
+      "email": "luis@outlook.com",
+      "direccion": "calle 20 N° 30-44",
+      "fechaNacimiento": "2006-01-11",
+      "numeroIdentificacion": "1005480211",
+      "fechaIngreso": 810107818,
+      "teamId": "1003"
+    }
+  ],
+  "teams": [
+    {
+      "id": "1001",
+      "nombre": "artemis",
+      "trainer": "Carlos"
+    },
+    {
+      "id": "1002",
+      "nombre": "Apolo",
+      "trainer": "Wermen"
+    },
+    {
+      "id": "1003",
+      "nombre": "Sputnik",
+      "trainer": "Miguel"
+    }
+  ],
+  "skill": [
+    {
+      "id": "2001",
+      "nombre": "FrontEnd"
+    },
+    {
+      "id": "2002",
+      "nombre": "backend"
+    },
+    {
+      "id": "2003",
+      "nombre": "FullStack"
+    }
+  ],
+  "moduloSkill": [
+    {
+      "id": "3001",
+      "nombre": "Python",
+      "skillId": "2002"
+    },
+    {
+      "id": "3002",
+      "nombre": "JavaScript",
+      "skillId": "2003"
+    },
+    {
+      "id": "3003",
+      "nombre": "MongoDB",
+      "skillId": "2002"
+    },
+    {
+      "id": "3004",
+      "nombre": "React",
+      "skillId": "2001"
+    }
+  ],
+  "evaluacion": [
+    {
+      "nota": "50",
+      "id": "1",
+      "moduloSkillId": "3002"
+    },
+    {
+      "nota": "47",
+      "id": "5",
+      "moduloSkillId": "3001"
+    },
+    {
+      "nota": "30",
+      "id": "2",
+      "moduloSkillId": "3001"
+    },
+    {
+      "nota": "45",
+      "id": "3",
+      "moduloSkillId": "3003"
+    },
+    {
+      "nota": "30",
+      "id": "4",
+      "moduloSkillId": "3001"
+    },
+    {
+      "nota": "20",
+      "id": "6",
+      "moduloSkillId": "3002"
+    },
+    {
+      "nota": "35",
+      "id": "5",
+      "moduloSkillId": "3002"
+    },
+    {
+      "nota": "25",
+      "id": "5",
+      "moduloSkillId": "3003"
+    }
+
+  ]
+}
