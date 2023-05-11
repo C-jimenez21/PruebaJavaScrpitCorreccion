@@ -76,14 +76,16 @@ function addReclutas(e){
     
     if(validacion(recluta)){
         alert("Formulario valido")
+    }else{
+        alert("Rellene todos los campos antes de continuar")
     }
     
     agregarReclutas(recluta)
     
 }
 
-function validacion (obj){
-    return !Object.values(obj).every(el=>el !== "")
+function validacion(obj){
+    return Object.values(obj).every(el=>el !== "")
 }
 
 //Eliminar recluta
@@ -92,11 +94,11 @@ const btnListaReclutas = document.querySelector("#TablaReclutas")
 btnListaReclutas.addEventListener("click", deleteRecluta)
 
 function deleteRecluta(e){
-    console.log(e.target.classList)
-    console.log(btnListaReclutas);
+   // console.log(e.target.classList)
+   // console.log(btnListaReclutas);
     if(e.target.classList.contains("delete")){//classList -> Siempre con L mayusculaaaa
         const reclutaId = parseInt(e.target.dataset.camper)
-        const confirmar = confirm("Deseas eliminar al camper?"+e.target.dataset.camper)
+        const confirmar = confirm("Deseas eliminar al camper?"+reclutaId)
         if(confirmar){
             eliminarReclutas(reclutaId)
         }

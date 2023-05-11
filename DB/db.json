@@ -49,18 +49,6 @@
       "teamId": "1003"
     },
     {
-      "id": "4",
-      "nombre": "Jose Carvhalo",
-      "edad": "15",
-      "telefono": "3188361945",
-      "email": "undefined@asd.com",
-      "direccion": "calle 20 N° 30-44",
-      "fechaNacimiento": "2005-07-06",
-      "numeroIdentificacion": "11172129912",
-      "fechaIngreso": 31568347696,
-      "teamId": "1001"
-    },
-    {
       "id": "5",
       "nombre": "Angie Juliana",
       "edad": "22",
@@ -82,6 +70,18 @@
       "fechaNacimiento": "2006-01-11",
       "numeroIdentificacion": "1005480211",
       "fechaIngreso": 810107818,
+      "teamId": "1003"
+    },
+    {
+      "id": "8",
+      "nombre": "Eladio carreon",
+      "edad": "27",
+      "telefono": "7241156",
+      "email": "cristian2182768@correo.uis.edu.co",
+      "direccion": "calle 20 N° 30-44",
+      "fechaNacimiento": "2002-06-13",
+      "numeroIdentificacion": "1005480399",
+      "fechaIngreso": 2569594159,
       "teamId": "1003"
     }
   ],
@@ -179,6 +179,5 @@
       "id": "5",
       "moduloSkillId": "3003"
     }
-
   ]
 }
